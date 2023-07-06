@@ -91,7 +91,7 @@ const Game = () => {
     return (
       <div
         key={index}
-        className={`flex p-1 md:p-2 active:scale-95 duration-150 justify-center sm:h-16 items-center h-10 md:h-[4.2rem] md:w-[4.2rem] border md:border border-gray-400 md:rounded cursor-pointer ${index < 9 ? "border-t" : "border-t-0"} ${index % 9 == 0 ? "border-l" : "border-l-0"} font-bold ${isWinningCell ? "text-green-400 bg-green-950/30 border-green-600" : "text-blue-200"}`}
+        className={`flex p-1 md:p-2 active:scale-95 duration-150 justify-center sm:h-16 items-center h-10 md:h-[4.2rem] md:w-[4.2rem] border md:border border-gray-400 md:rounded cursor-pointer ${index < 9 ? "border-t" : "border-t-0"} ${index % 9 == 0 ? "border-l" : "border-l-0"} font-bold ${isWinningCell ? "text-green-400 bg-green-950/30 md:border-green-600" : "text-blue-200"}`}
         onClick={() => handleClick(index)}>
         {board[index]}
       </div>
@@ -103,7 +103,7 @@ const Game = () => {
       <div className="w-[44rem]">
         <button
           onClick={() => resetBoard()}
-          className={`h-12 ${winner && "bg-red-600"} absolute left-1/2 -translate-x-1/2 md:left-16 lg:left-40 md:top-1/2 bottom-10 py-2 px-10 shadow shadow-gray-800 rounded bg-gray-700 text-white hover:opacity-80`}>
+          className={`h-12 ${winner && "bg-red-600"} absolute left-1/2 -translate-x-1/2 md:left-16 lg:left-40 md:top-1/2 bottom-16 py-2 px-10 shadow shadow-gray-800 rounded bg-gray-700 text-white hover:opacity-80`}>
           Reset
         </button> 
         <div className="grid grid-cols-9 md:gap-2">{board.map((_, index) => renderCell(index))}</div>
