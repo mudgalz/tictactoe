@@ -19,7 +19,7 @@ export default function App() {
         {settingsIcon}
       </button>
       <a
-        href="https://mudgal.netlify.app"
+        href="https://mudgal.framer.ai"
         className="absolute bottom-5 left-5 hover:scale-105 hover:text-sky-300 duration-150">
         made by mudgal
       </a>
